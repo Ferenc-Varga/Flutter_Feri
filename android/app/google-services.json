@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "83496302133",
+    "project_id": "laboflutter",
+    "storage_bucket": "laboflutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83496302133:android:31a7dd965d4ba73404637c",
+        "android_client_info": {
+          "package_name": "com.example.laboflutter_vf_hh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "83496302133-0fh580c824ood5rqhtr44tpt94lb7c4o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOLFWAbucJFtgqHWU5AaHvPzrqNuX36Gc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "83496302133-0fh580c824ood5rqhtr44tpt94lb7c4o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
