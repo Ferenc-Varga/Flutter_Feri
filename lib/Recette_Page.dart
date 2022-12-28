@@ -14,7 +14,7 @@ class RecettePage extends StatefulWidget {
 class _RecettePage extends State<RecettePage> {
 
   late List<Recipe> _recipes;
-  bool _isLoading = true;
+  //bool _isLoading = true;
 
   @override
   void initState() {
@@ -25,7 +25,7 @@ class _RecettePage extends State<RecettePage> {
   Future<void> getRecipes() async {
     _recipes = await RecipeApi.getRecipe();
     setState(() {
-      _isLoading = false;
+     // _isLoading = false;
     });
   }
 
@@ -48,9 +48,9 @@ class _RecettePage extends State<RecettePage> {
           ],
         ),
       ),
-        body: _isLoading
-        ? const Center(child: CircularProgressIndicator())
-        : ListView.builder(
+        //:body: _isLoading
+        //? const Center(child: CircularProgressIndicator())
+        body : ListView.builder(
         itemCount: _recipes.length,
         itemBuilder: (context, index) {
           return RecipeCard(

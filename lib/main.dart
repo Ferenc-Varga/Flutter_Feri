@@ -1,4 +1,4 @@
-import 'package:firebase_core/firebase_core.dart';
+//import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'Main_Page.dart';
 import 'Page_Login.dart';
@@ -7,8 +7,8 @@ import 'Page_Login.dart';
 
     runApp(const MyApp());
 
-    WidgetsFlutterBinding.ensureInitialized();
-    await Firebase.initializeApp();
+    //WidgetsFlutterBinding.ensureInitialized();
+    //await Firebase.initializeApp();
 
 }
 
