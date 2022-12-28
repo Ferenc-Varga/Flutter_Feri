@@ -24,6 +24,7 @@ class _RecettePage extends State<RecettePage> {
           // Ajoutez ici les widgets pour les différentes fonctionnalités de votre appbar
         ],
       ),
+
     );
   }
 }
