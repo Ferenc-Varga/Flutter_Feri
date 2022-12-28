@@ -13,18 +13,21 @@ class _RecettePage extends State<RecettePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('RecettePage'),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.of(context).pop();
           },
         ),
-        actions: const <Widget>[
-          // Ajoutez ici les widgets pour les différentes fonctionnalités de votre appbar
-        ],
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            Icon(Icons.restaurant_menu),
+            SizedBox(width: 10),
+            Text('Recettes'),
+          ],
+        ),
       ),
-
     );
   }
 }
