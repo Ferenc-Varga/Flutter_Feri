@@ -80,7 +80,7 @@ class _MainPage extends State<MainPage> with SingleTickerProviderStateMixin {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const RecettePage()),
+                      builder: (context) => RecettePage()),
                 );
               },
             ),
@@ -133,7 +133,7 @@ class _MainPage extends State<MainPage> with SingleTickerProviderStateMixin {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const PageLogin()),
+                      builder: (context) => PageLogin()),
                 );
               },
             ),
