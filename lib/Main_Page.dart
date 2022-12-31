@@ -37,7 +37,7 @@ class _MainPage extends State<MainPage> with SingleTickerProviderStateMixin {
       builder: (BuildContext context) {
         return AlertDialog(
           title: const Text("Présentation"),
-          content: const Text("Contenu de la boîte de dialogue"),
+          content: const Text("Ceci est la fenêtre du Frigo, cette fenêtre va vous permettre de répertorier et ajouter dans une base de données les aliments que vous avez dans votre frigo pour ensuite voir quelles recettes il est possible de faire avec ces aliments"),
           actions: <Widget>[
             ElevatedButton(
               child: const Text("Retour"),
@@ -66,7 +66,7 @@ class _MainPage extends State<MainPage> with SingleTickerProviderStateMixin {
       builder: (BuildContext context) {
         return AlertDialog(
           title: const Text("Présentation"),
-          content: const Text("Contenu de la boîte de dialogue"),
+          content: const Text("Ceci est la Page de Recettes, vous pouvez ici, avoir une liste d'exemple de recette à réaliser avec les ingrédients de votre frigo, chaque recette a sa description et sa mise en oeuvre"),
           actions: <Widget>[
             ElevatedButton(
               child: const Text("Retour"),
@@ -95,7 +95,7 @@ class _MainPage extends State<MainPage> with SingleTickerProviderStateMixin {
       builder: (BuildContext context) {
         return AlertDialog(
           title: const Text("Présentation"),
-          content: const Text("Contenu de la boîte de dialogue"),
+          content: const Text("La Page de note va vous permettre de créer une liste de courses en fonction des ingrédients manquant dans votre frigo pour réaliser une des recettes, vous pourrez enregistrer dans l'applications, supprimer ou même juste affiche votre liste des courses"),
           actions: <Widget>[
             ElevatedButton(
               child: const Text("Retour"),
@@ -158,7 +158,6 @@ class _MainPage extends State<MainPage> with SingleTickerProviderStateMixin {
         width: 600,
         height: 200,
         decoration: BoxDecoration(
-          image: const DecorationImage(image: NetworkImage("https://www.pleinevie.fr/wp-content/uploads/pleinevie/2021/06/surcharger-refrigerateur.jpeg")),
           color: Colors.white,
           borderRadius: BorderRadius.circular(15),
           boxShadow: const [
@@ -177,10 +176,14 @@ class _MainPage extends State<MainPage> with SingleTickerProviderStateMixin {
           onTap: () {
             _showDialogFrigo();
           },
+          child: Image.network(
+            'https://www.pleinevie.fr/wp-content/uploads/pleinevie/2021/06/surcharger-refrigerateur.jpeg',
+            fit: BoxFit.cover,
         ),
       ),
     ),
     ),
+      ),
     const SizedBox(height: 20),
     Center(
     child: ScaleTransition(
@@ -218,7 +221,7 @@ class _MainPage extends State<MainPage> with SingleTickerProviderStateMixin {
                       _showDialogRecette();
                     },
                     child: Image.network(
-                      'https://www.pleinevie.fr/wp-content/uploads/pleinevie/2021/06/surcharger-refrigerateur.jpeg',
+                      'https://woody.cloudly.space/app/uploads/crt-paca/2021/11/thumbs/recette-aioli-as-443787282-m-studio-640x480.jpeg',
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -261,7 +264,7 @@ class _MainPage extends State<MainPage> with SingleTickerProviderStateMixin {
                       _showDialogNote();
                     },
                     child: Image.network(
-                      'https://www.pleinevie.fr/wp-content/uploads/pleinevie/2021/06/surcharger-refrigerateur.jpeg',
+                      'https://st2.depositphotos.com/2240661/5470/i/600/depositphotos_54702839-stock-photo-shooping-list.jpg',
                       fit: BoxFit.cover,
                     ),
                   ),
