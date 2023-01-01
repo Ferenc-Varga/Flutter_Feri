@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:laboflutter_vf_hh/Info_Recette.dart';
 import 'package:laboflutter_vf_hh/recipe.api.dart';
 import 'package:laboflutter_vf_hh/recipe.dart';
 
@@ -40,9 +41,26 @@ class _RecettePage extends State<RecettePage> {
               Text('Food Recipe')
             ],
           ),
+          actions: [
+            // Ajout du menu ici
+            PopupMenuButton<String>(
+              onSelected: (String result) {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                    builder: (context) => InfoRecette(),
+                ));},
+              itemBuilder: (BuildContext context) => [
+                const PopupMenuItem(
+                  value: 'menu_item_1',
+                  child: Text('Info Recette'),
+                ),
+              ],
+            ),
+          ],
         ),
         body: _isLoading
-            ? Center(child: CircularProgressIndicator())
+            ? const Center(child: CircularProgressIndicator())
             : ListView.builder(
           itemCount: _recipes.length,
           itemBuilder: (context, index) {
