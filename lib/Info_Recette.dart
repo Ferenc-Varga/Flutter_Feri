@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:laboflutter_vf_hh/Frigo_Page.dart';
 
 class InfoRecette extends StatefulWidget {
   const InfoRecette({Key? key}) : super(key: key);
@@ -64,8 +65,26 @@ class _InfoRecette extends State<InfoRecette> {
                 context: context,
                 builder: (BuildContext context) {
                   return AlertDialog(
-                    title: Text("Conteneur $index"),
+                    title: Text("Recette $index"),
                     content: Text(_contenus[index - 1]),
+                    actions: <Widget>[
+                      ElevatedButton(
+                        child: const Text("Retour"),
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                      ElevatedButton(
+                        child: const Text("Frigo"),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => FrigoPage()),
+                          );
+                        },
+                      ),
+                    ],
                   );
                 },
               );
